@@ -21,5 +21,6 @@ Route::prefix('auth')->group(function () {
 // Personality routes
 Route::prefix('personality')->group(function () {
     Route::post('/predict', [PersonalityController::class, 'predict'])->name('personality.predict');
+    Route::get('/account', [PersonalityController::class, 'showAccount'])->name('personality.account')->middleware('auth');
 });
 

@@ -4,8 +4,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Personality Prediction</h1>
-            <p>Discover your personality type through advanced AI analysis. Get insights into your behavior patterns and
-                psychological traits with our comprehensive personality assessment tool.</p>
+            <p>Discover your personality type through advanced AI analysis. Get insights into your behavior patterns and psychological traits with our comprehensive personality assessment tool.</p>
             <a href="#quiz" class="cta-button">Start Assessment</a>
         </div>
     </section>
@@ -13,29 +12,25 @@
     <!-- About Section -->
     <section id="about" class="section">
         <h2>About Our System</h2>
-        <p>Our personality prediction system uses advanced machine learning algorithms to analyze your behavioral patterns
-            and provide accurate personality insights.</p>
+        <p>Our personality prediction system uses advanced machine learning algorithms to analyze your behavioral patterns and provide accurate personality insights.</p>
 
         <div class="about-grid">
             <div class="about-card">
                 <i class="fas fa-brain"></i>
                 <h3>AI-Powered Analysis</h3>
-                <p>Our system uses sophisticated machine learning models trained on extensive personality data to provide
-                    accurate predictions about your personality type.</p>
+                <p>Our system uses sophisticated machine learning models trained on extensive personality data to provide accurate predictions about your personality type.</p>
             </div>
 
             <div class="about-card">
                 <i class="fas fa-chart-line"></i>
                 <h3>Detailed Insights</h3>
-                <p>Get comprehensive insights into your personality traits, behavioral patterns, and psychological
-                    characteristics with confidence scores.</p>
+                <p>Get comprehensive insights into your personality traits, behavioral patterns, and psychological characteristics with confidence scores.</p>
             </div>
 
             <div class="about-card">
                 <i class="fas fa-shield-alt"></i>
                 <h3>Privacy Protected</h3>
-                <p>Your data is completely secure and private. We don't store personal information and all analysis is done
-                    locally in your browser.</p>
+                <p>Your data is completely secure and private. We don't store personal information and all analysis is done locally in your browser.</p>
             </div>
         </div>
     </section>
@@ -44,6 +39,12 @@
     <section id="quiz" class="section">
         <h2>Personality Assessment</h2>
         <p>Answer the following questions honestly to get an accurate personality prediction.</p>
+
+        <!-- Error Message Display -->
+        <div id="errorContainer" class="error-message" style="display: none; background: #ffe6e6; color: #d32f2f; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="errorMessage"></span>
+        </div>
 
         <div class="quiz-container">
             <div class="quiz-header">
@@ -157,8 +158,7 @@
             </div>
 
             <div class="form-navigation">
-                <button type="button" class="nav-btn prev-btn" id="prevBtn" onclick="previousQuestion()"
-                    style="display: none;">
+                <button type="button" class="nav-btn prev-btn" id="prevBtn" onclick="previousQuestion()" style="display: none;">
                     <i class="fas fa-arrow-left"></i>
                 </button>
                 <button type="button" class="nav-btn next-btn" id="nextBtn" onclick="nextQuestion()">
@@ -184,12 +184,9 @@
             <h3>Your Personality Prediction</h3>
             <div class="speedometer">
                 <svg class="speedometer-svg" viewBox="0 0 300 150">
-                    <path d="M50 150 A100 100 0 0 1 250 150" fill="none" stroke="#AA2C86" stroke-width="20"
-                        stroke-opacity="0.3" />
-                    <path id="speedometerArc" d="M50 150 A100 100 0 0 1 250 150" fill="none" stroke="#AA2C86"
-                        stroke-width="20" />
-                    <line class="speedometer-needle" x1="150" y1="150" x2="150" y2="50"
-                        stroke="#fff" stroke-width="4" />
+                    <path d="M50 150 A100 100 0 0 1 250 150" fill="none" stroke="#AA2C86" stroke-width="20" stroke-opacity="0.3" />
+                    <path id="speedometerArc" d="M50 150 A100 100 0 0 1 250 150" fill="none" stroke="#AA2C86" stroke-width="20" />
+                    <line class="speedometer-needle" x1="150" y1="150" x2="150" y2="50" stroke="#fff" stroke-width="4" />
                     <circle cx="150" cy="150" r="10" fill="#AA2C86" />
                 </svg>
                 <div class="progress-value" id="progressValue">0%</div>
@@ -216,7 +213,7 @@
 
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
-                <p>info@optcare.com</p>
+                <p>info@IntroExtro.com</p>
             </div>
 
             <div class="contact-form">
@@ -354,7 +351,7 @@
                         // Focus on the new input
                         const newInput = document.querySelector(
                             `.form-slide[data-question="${currentQuestion}"] input, .form-slide[data-question="${currentQuestion}"] select`
-                            );
+                        );
                         if (newInput) {
                             setTimeout(() => newInput.focus(), 300);
                         }
@@ -373,78 +370,86 @@
                     // Focus on the previous input
                     const prevInput = document.querySelector(
                         `.form-slide[data-question="${currentQuestion}"] input, .form-slide[data-question="${currentQuestion}"] select`
-                        );
+                    );
                     if (prevInput) {
                         setTimeout(() => prevInput.focus(), 300);
                     }
                 }
             }
 
-                    // Initialize first question
-        showQuestion(currentQuestion);
+            function submitForm() {
+                const errorContainer = document.getElementById('errorContainer');
+                const errorMessage = document.getElementById('errorMessage');
 
-        // Add keyboard support for form submission
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && currentQuestion === totalQuestions) {
-                submitForm();
-            }
-        });
+                const formData = {
+                    timeAlone: parseFloat(document.getElementById('timeAlone').value),
+                    socialEvents: parseFloat(document.getElementById('socialEvents').value),
+                    goingOutside: parseFloat(document.getElementById('goingOutside').value),
+                    friendsCircle: parseInt(document.getElementById('friendsCircle').value),
+                    postFrequency: parseFloat(document.getElementById('postFrequency').value),
+                    stageFear: document.getElementById('stageFear').value,
+                    drainedSocializing: document.getElementById('drainedSocializing').value
+                };
 
-        // Submit form function
-        function submitForm() {
-            const formData = {
-                timeAlone: parseFloat(document.getElementById('timeAlone').value),
-                socialEvents: parseFloat(document.getElementById('socialEvents').value),
-                goingOutside: parseFloat(document.getElementById('goingOutside').value),
-                friendsCircle: parseInt(document.getElementById('friendsCircle').value),
-                postFrequency: parseFloat(document.getElementById('postFrequency').value),
-                stageFear: document.getElementById('stageFear').value,
-                drainedSocializing: document.getElementById('drainedSocializing').value
-            };
-
-            // Validate all fields are filled
-            const requiredFields = ['timeAlone', 'socialEvents', 'goingOutside', 'friendsCircle', 'postFrequency', 'stageFear', 'drainedSocializing'];
-            for (let field of requiredFields) {
-                if (!formData[field] && formData[field] !== 0) {
-                    alert('Please fill in all questions before submitting.');
-                    return;
+                // Validate all fields are filled
+                const requiredFields = ['timeAlone', 'socialEvents', 'goingOutside', 'friendsCircle', 'postFrequency', 'stageFear', 'drainedSocializing'];
+                for (let field of requiredFields) {
+                    if (!formData[field] && formData[field] !== 0) {
+                        errorContainer.style.display = 'block';
+                        errorMessage.textContent = 'Please fill in all questions before submitting.';
+                        setTimeout(() => {
+                            errorContainer.style.display = 'none';
+                        }, 3000);
+                        return;
+                    }
                 }
+
+                // Show loading
+                document.getElementById('loading').classList.add('active');
+                document.querySelector('.quiz-container').style.display = 'none';
+                errorContainer.style.display = 'none';
+
+                // Send data to Laravel backend
+                fetch('/personality/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
+                    if (response.status === 401) {
+                        return response.json().then(data => {
+                            throw new Error(data.message || 'Unauthorized');
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        showResult(data.prediction);
+                    } else {
+                        throw new Error(data.message || 'Something went wrong');
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('loading').classList.remove('active');
+                    document.querySelector('.quiz-container').style.display = 'block';
+                    errorContainer.style.display = 'block';
+                    errorMessage.textContent = error.message;
+                    if (error.message.includes('Please login')) {
+                        setTimeout(() => {
+                            window.location.href = '/auth/login';
+                        }, 2000);
+                    } else {
+                        setTimeout(() => {
+                            errorContainer.style.display = 'none';
+                            resetQuiz();
+                        }, 3000);
+                    }
+                });
             }
-
-            // Show loading
-            document.getElementById('loading').classList.add('active');
-            document.querySelector('.quiz-container').style.display = 'none';
-
-            console.log(formData);
-
-            // Send data to Laravel backend
-            fetch('/personality/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showResult(data.prediction);
-                } else {
-                    alert('Error: ' + (data.message || 'Something went wrong'));
-                    resetQuiz();
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error: Something went wrong. Please try again.');
-                resetQuiz();
-            });
-        }
-
-
-
-
 
             function showResult(prediction) {
                 document.getElementById('loading').classList.remove('active');
@@ -483,28 +488,28 @@
                 updateProgress();
             }
 
-                    // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
 
-            // Add success animation
-            const form = this.closest('.contact-form');
-            form.classList.add('success');
+                // Add success animation
+                const form = this.closest('.contact-form');
+                form.classList.add('success');
 
-            // Show success message
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
-            submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                // Show success message
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-check"></i><span>Message Sent!</span>';
+                submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
 
-            // Reset form after animation
-            setTimeout(() => {
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                form.classList.remove('success');
-            }, 2000);
-        });
+                // Reset form after animation
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    form.classList.remove('success');
+                }, 2000);
+            });
 
             // Mobile menu toggle (basic implementation)
             document.querySelector('.mobile-menu').addEventListener('click', function() {
@@ -529,6 +534,16 @@
                 document.querySelectorAll('.about-card, .contact-info, .contact-form').forEach(el => {
                     observer.observe(el);
                 });
+            });
+
+            // Initialize first question
+            showQuestion(currentQuestion);
+
+            // Add keyboard support for form submission
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && currentQuestion === totalQuestions) {
+                    submitForm();
+                }
             });
         </script>
     @endpush
