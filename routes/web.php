@@ -15,5 +15,11 @@ Route::prefix('auth')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
     Route::get('/register', [AuthController::class, 'showRegister'])->name('auth.register');
     Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
-        Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
+
+// Personality routes
+Route::prefix('personality')->group(function () {
+    Route::post('/predict', [PersonalityController::class, 'predict'])->name('personality.predict');
+});
+
