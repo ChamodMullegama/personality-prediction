@@ -7,6 +7,6 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>© 2024 OptCare - Personality Prediction System. All rights reserved.</p>
+            <p>© 2025 IntroExtro - Personality Prediction System. All rights reserved.</p>
         </div>
     </footer>

@@ -78,7 +78,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect('/')->with('success', 'Account created successfully! Welcome to OptCare.');
+        return redirect('/')->with('success', 'Account created successfully! Welcome to IntroExtro.');
     }
 
         public function logout(Request $request)
