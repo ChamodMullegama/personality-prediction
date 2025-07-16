@@ -10,5 +10,7 @@ Route::get('/', [PersonalityController::class, 'showForm'])->name('personality.f
 
 // Authentication routes
 Route::prefix('auth')->group(function () {
-    Route::get('/register', [AuthControllerr::class, 'showRegister'])->name('auth.register');
+
+    Route::get('/register', [AuthController::class, 'showRegister'])->name('auth.register');
+    Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
 });
