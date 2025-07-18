@@ -1,11 +1,11 @@
 @extends('Layout.main')
 @section('container')
-
+<br>
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
                 <h1>Create Account</h1>
-                <p>Join OptCare and discover your personality</p>
+                <p>Join IntroExtro and discover your personality</p>
             </div>
 
             @if(session('success'))

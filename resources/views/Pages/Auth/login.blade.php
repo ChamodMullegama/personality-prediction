@@ -5,7 +5,7 @@
         <div class="auth-card">
             <div class="auth-header">
                 <h1>Welcome Back</h1>
-                <p>Sign in to your OptCare account</p>
+                <p>Sign in to your IntroExtro account</p>
             </div>
 
             @if(session('success'))

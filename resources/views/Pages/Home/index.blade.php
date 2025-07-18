@@ -5,7 +5,7 @@
         <div class="hero-content">
             <h1>Personality Prediction</h1>
             <p>Discover your personality type through advanced AI analysis. Get insights into your behavior patterns and psychological traits with our comprehensive personality assessment tool.</p>
-            <a href="#quiz" class="cta-button">Start Assessment</a>
+            <a href="#quiz" class="cta-button">Start Prediction</a>
         </div>
     </section>
 
@@ -37,7 +37,7 @@
 
     <!-- Quiz Section -->
     <section id="quiz" class="section">
-        <h2>Personality Assessment</h2>
+        <h2>Personality Prediction</h2>
         <p>Answer the following questions honestly to get an accurate personality prediction.</p>
 
         <!-- Error Message Display -->
@@ -209,7 +209,7 @@
 
                 <i class="fas fa-phone"></i>
                 <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+94 702 740 542</p>
 
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
