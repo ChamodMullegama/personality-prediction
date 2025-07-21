@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Route;
 // Main route
 Route::get('/', [PersonalityController::class, 'showForm'])->name('personality.form');
 
-
 // Authentication routes
 Route::prefix('auth')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('auth.login');
