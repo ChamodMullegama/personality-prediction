@@ -18,8 +18,8 @@ A machine learning web application that predicts whether a person is more of an 
       <tr>
       <td><img src="/Images/image7.png" width="300" alt="Home Page"></td>
       <td><img src="/Images/image8.png" width="300" alt="Home Page"></td>
-  
-    </tr>
+   </tr>
+
 
 
   </table>
