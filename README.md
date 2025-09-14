@@ -6,9 +6,9 @@ A machine learning web application that predicts whether a person is more of an 
 <div align="center">
   <table>
     <tr>
-      <td><img src="/Documents/Demo Images/patient1.png" width="300" alt="Home Page"></td>
-      <td><img src="/Documents/Demo Images/patient12.png" width="300" alt="Home Page"></td>
-      <td><img src="/Documents/Demo Images/patient13.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image1.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image2.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image1.png" width="300" alt="Home Page"></td>
     </tr>
     <tr>
        <td><img src="/Documents/Demo Images/doctor1.png" width="300" alt="Home Page"></td>
