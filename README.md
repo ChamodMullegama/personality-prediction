@@ -8,18 +8,20 @@ A machine learning web application that predicts whether a person is more of an 
     <tr>
       <td><img src="/Images/image1.png" width="300" alt="Home Page"></td>
       <td><img src="/Images/image2.png" width="300" alt="Home Page"></td>
-      <td><img src="/Images/image1.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image3.png" width="300" alt="Home Page"></td>
     </tr>
-    <tr>
-       <td><img src="/Documents/Demo Images/doctor1.png" width="300" alt="Home Page"></td>
-       <td><img src="/Documents/Demo Images/doctor2.png" width="300" alt="Home Page"></td>
-       <td><img src="/Documents/Demo Images/doctor3.png" width="300" alt="Home Page"></td>
+        <tr>
+      <td><img src="/Images/image4.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image5.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image6.png" width="300" alt="Home Page"></td>
     </tr>
       <tr>
-            <td><img src="/Documents/Demo Images/admin1.png" width="300" alt="Home Page"></td>
-            <td><img src="/Documents/Demo Images/admin2.png" width="300" alt="Home Page"></td>
-            <td><img src="/Documents/Demo Images/admin3.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image7.png" width="300" alt="Home Page"></td>
+      <td><img src="/Images/image8.png" width="300" alt="Home Page"></td>
+  
     </tr>
+
+
   </table>
 </div>
 
