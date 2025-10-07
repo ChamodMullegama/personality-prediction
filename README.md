@@ -19,9 +19,6 @@ A machine learning web application that predicts whether a person is more of an 
       <td><img src="/Images/image7.png" width="300" alt="Home Page"></td>
       <td><img src="/Images/image8.png" width="300" alt="Home Page"></td>
    </tr>
-
-
-
   </table>
 </div>
 
